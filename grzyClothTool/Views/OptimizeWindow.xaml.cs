@@ -97,6 +97,12 @@ namespace grzyClothTool.Views
                     case "DXT5 (gradient alpha)":
                         _textureFormat = TextureFormat.D3DFMT_DXT5;
                         break;
+                    case "BC7 (high quality compression - requires DirectX 11)":
+                        _textureFormat = TextureFormat.D3DFMT_BC7;
+                        break;
+                    case "A8R8G8B8 (uncompressed)":
+                        _textureFormat = TextureFormat.D3DFMT_A8R8G8B8;
+                        break;
                 }
 
                 OnPropertyChanged();
@@ -104,7 +110,7 @@ namespace grzyClothTool.Views
             }
         }
         
-        public string[] AvailableCompression { get; set; } = ["DXT1 (no alpha)", "DXT3 (sharp alpha)", "DXT5 (gradient alpha)"];
+        public string[] AvailableCompression { get; set; } = ["DXT1 (no alpha)", "DXT3 (sharp alpha)", "DXT5 (gradient alpha)", "BC7 (high quality compression - requires DirectX 11)", "A8R8G8B8 (uncompressed)"];
         private bool _isTextureCompressionEnabled;
         public bool IsTextureCompressionEnabled
         {

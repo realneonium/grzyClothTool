@@ -134,6 +134,8 @@ public static class ImgHelper
             "D3DFMT_DXT1" => "dxt1",
             "D3DFMT_DXT3" => "dxt3",
             "D3DFMT_DXT5" => "dxt5",
+            "D3DFMT_BC7" => "bc7",
+            "D3DFMT_A8R8G8B8" => "a8r8g8b8",
             _ => "dxt5",
         };
     }
